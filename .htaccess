@@ -1,0 +1,12 @@
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Handle requests to your PHP application
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
+
+# Allow access to static files
+<FilesMatch "\.(css|js|jpg|png|gif|ico|svg)$">
+    Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>
