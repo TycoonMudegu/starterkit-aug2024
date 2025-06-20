@@ -8,7 +8,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx tailwindcss -i ./app/assets/css/styles.css -o ./app/assets/css/output.css --watch",
     "build": "npx tailwindcss -i ./app/assets/css/styles.css -o ./app/assets/css/output.css --minify",
-    "prod": "npm run build"
+    "prod": "npm run build",
+    "push": "git pull origin main && git add -A && git commit -m \"$npm_config_msg\" && git push origin main",
+    "autopush": "git pull origin main && git add -A && git commit -m \"Auto‐commit: $(date)\" && git push origin main"
   },
   "keywords": [],
   "author": "",
