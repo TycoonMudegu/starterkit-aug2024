@@ -1,5 +1,1 @@
-
-<?php
-    include 'routes.php'
-
-?>
+hello world
