@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 // Get the current URI
 $uri = $_SERVER['REQUEST_URI'];
@@ -7,17 +6,13 @@ $uri = $_SERVER['REQUEST_URI'];
 // Extract the path before the query string
 $path = strstr($uri, '?', true) ?: $uri;
 
-// Define the base directory
-$baseDir = '/mudegu.online';
+$baseDir = $_ENV['APP_BASE_DIR'] ;
 
 // Map URIs to corresponding PHP files
 $routes = [
     $baseDir . '/' => 'app/views/Home.php',
 
     $baseDir . '/Home' => 'app/views/Home.php',
-
-
-
     
     // Add more routes as needed
 ];

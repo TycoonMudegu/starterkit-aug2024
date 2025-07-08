@@ -1,4 +1,12 @@
-<?php require_once 'app/views/head.php'?>
+<?php require_once 'app/views/head.php';
+
+// build the full URL (scheme + host + URI)
+$scheme     = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+$host       = $_SERVER['HTTP_HOST'];
+$requestUri = $_SERVER['REQUEST_URI'];
+$currentUrl = sprintf('%s://%s%s', $scheme, $host, $requestUri);
+
+?>
 
 <!-- app/pages/404.php -->
 
@@ -31,14 +39,18 @@
 
 </style>
 
-<div class="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-center text-white">
-    <h1 class="text-7xl font-extrabold text-neon-pink glitch">404</h1>
-    <h2 class="text-2xl mt-4 glitch">Page Not Found</h2>
-    <p class="mt-6 max-w-md">
-        Oops! Seems you have an error. i think its probably something in your routes. change it and have fun... rember to edit this pager again
+<div class="flex flex-col items-center justify-center min-h-screen text-center text-white bg-gray-900">
+    <h1 class="font-extrabold text-7xl text-neon-pink glitch" data-text="404">404</h1>
+    <h2 class="mt-4 text-2xl glitch" data-text="Page Not Found">Page Not Found</h2>
+    <p class="max-w-md mt-6">
+        Oops! Looks like something went wrong with routing.  
         <br>
-        <a href="Home" class="mt-4 inline-block text-neon-blue hover:underline">
-            Return to safety
-        </a>
+        <strong>Requested URL:</strong><br>
+        <code><?php echo htmlspecialchars($currentUrl, ENT_QUOTES, 'UTF-8'); ?></code>
+        <br><br>
+        Hint: check your routes configuration, then come back and update this page!
     </p>
+    <a href="/" class="inline-block mt-4 text-neon-blue hover:underline">
+        Return to safety
+    </a>
 </div>
