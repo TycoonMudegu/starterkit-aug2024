@@ -1,0 +1,147 @@
+[17-Jul-2025 09:33:50 Europe/Berlin] PHP Fatal error:  Uncaught Dotenv\Exception\InvalidFileException: Failed to parse dotenv file. Encountered unexpected whitespace at [zvqc axhr ptjj hcsk]. in D:\xampp3\htdocs\starterkit-aug2024\vendor\vlucas\phpdotenv\src\Parser\Parser.php:30
+Stack trace:
+#0 D:\xampp3\htdocs\starterkit-aug2024\vendor\graham-campbell\result-type\src\Error.php(119): Dotenv\Parser\Parser::Dotenv\Parser\{closure}('Encountered une...')
+#1 D:\xampp3\htdocs\starterkit-aug2024\vendor\vlucas\phpdotenv\src\Parser\Parser.php(29): GrahamCampbell\ResultType\Error->mapError(Object(Closure))
+#2 D:\xampp3\htdocs\starterkit-aug2024\vendor\vlucas\phpdotenv\src\Dotenv.php(222): Dotenv\Parser\Parser->parse('\r\n#base directo...')
+#3 D:\xampp3\htdocs\starterkit-aug2024\index.php(30): Dotenv\Dotenv->load()
+#4 {main}
+  thrown in D:\xampp3\htdocs\starterkit-aug2024\vendor\vlucas\phpdotenv\src\Parser\Parser.php on line 30
+[17-Jul-2025 14:13:17 Europe/Berlin] PHP Fatal error:  Uncaught MailerSend\Exceptions\MailerSendException: Please set "api_key" in SDK options. in D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\MailerSend.php:158
+Stack trace:
+#0 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\MailerSend.php(96): MailerSend\MailerSend->setOptions(Array)
+#1 D:\xampp3\htdocs\starterkit-aug2024\app\Emails\emailtest.php(9): MailerSend\MailerSend->__construct(Array)
+#2 D:\xampp3\htdocs\starterkit-aug2024\routes.php(28): require_once('D:\\xampp3\\htdoc...')
+#3 D:\xampp3\htdocs\starterkit-aug2024\index.php(41): include('D:\\xampp3\\htdoc...')
+#4 {main}
+  thrown in D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\MailerSend.php on line 158
+[17-Jul-2025 14:15:04 Europe/Berlin] PHP Fatal error:  Uncaught MailerSend\Exceptions\MailerSendAssertException: Value "test-86org8e50v1gew13.mlsender.net" was expected to be a valid e-mail address. in D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\GeneralHelpers.php:22
+Stack trace:
+#0 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\GeneralHelpers.php(37): MailerSend\Helpers\GeneralHelpers::assert(Object(Closure))
+#1 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Endpoints\Email.php(22): MailerSend\Helpers\GeneralHelpers::validateEmailParams(Object(MailerSend\Helpers\Builder\EmailParams))
+#2 D:\xampp3\htdocs\starterkit-aug2024\app\Emails\emailtest.php(23): MailerSend\Endpoints\Email->send(Object(MailerSend\Helpers\Builder\EmailParams))
+#3 D:\xampp3\htdocs\starterkit-aug2024\routes.php(28): require_once('D:\\xampp3\\htdoc...')
+#4 D:\xampp3\htdocs\starterkit-aug2024\index.php(41): include('D:\\xampp3\\htdoc...')
+#5 {main}
+  thrown in D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\GeneralHelpers.php on line 22
+[17-Jul-2025 14:15:43 Europe/Berlin] PHP Fatal error:  Uncaught MailerSend\Exceptions\MailerSendValidationException: The from.email domain must be verified in your account to send emails. #MS42207 in D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\HttpErrorHelper.php:27
+Stack trace:
+#0 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\httplug\src\Promise\HttpFulfilledPromise.php(28): MailerSend\Helpers\HttpErrorHelper->MailerSend\Helpers\{closure}(Object(GuzzleHttp\Psr7\Response))
+#1 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\HttpErrorHelper.php(19): Http\Client\Promise\HttpFulfilledPromise->then(Object(Closure))
+#2 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(44): MailerSend\Helpers\HttpErrorHelper->handleRequest(Object(Nyholm\Psr7\Request), Object(Closure), Object(Http\Client\Common\PluginChain))
+#3 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\Plugin\HeaderDefaultsPlugin.php(41): Http\Client\Common\PluginChain->Http\Client\Common\{closure}(Object(Nyholm\Psr7\Request))
+#4 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(44): Http\Client\Common\Plugin\HeaderDefaultsPlugin->handleRequest(Object(Nyholm\Psr7\Request), Object(Closure), Object(Http\Client\Common\PluginChain))
+#5 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\Plugin\ContentTypePlugin.php(81): Http\Client\Common\PluginChain->Http\Client\Common\{closure}(Object(Nyholm\Psr7\Request))
+#6 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(44): Http\Client\Common\Plugin\ContentTypePlugin->handleRequest(Object(Nyholm\Psr7\Request), Object(Closure), Object(Http\Client\Common\PluginChain))
+#7 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\Plugin\AuthenticationPlugin.php(33): Http\Client\Common\PluginChain->Http\Client\Common\{closure}(Object(Nyholm\Psr7\Request))
+#8 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(44): Http\Client\Common\Plugin\AuthenticationPlugin->handleRequest(Object(Nyholm\Psr7\Request), Object(Closure), Object(Http\Client\Common\PluginChain))
+#9 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(59): Http\Client\Common\PluginChain->Http\Client\Common\{closure}(Object(Nyholm\Psr7\Request))
+#10 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginClient.php(84): Http\Client\Common\PluginChain->__invoke(Object(Nyholm\Psr7\Request))
+#11 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Common\HttpLayer.php(90): Http\Client\Common\PluginClient->sendRequest(Object(Nyholm\Psr7\Request))
+#12 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Common\HttpLayer.php(60): MailerSend\Common\HttpLayer->call_method('POST', 'https://api.mai...', Array)
+#13 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Endpoints\Email.php(30): MailerSend\Common\HttpLayer->post('https://api.mai...', Array)
+#14 D:\xampp3\htdocs\starterkit-aug2024\app\Emails\emailtest.php(23): MailerSend\Endpoints\Email->send(Object(MailerSend\Helpers\Builder\EmailParams))
+#15 D:\xampp3\htdocs\starterkit-aug2024\routes.php(28): require_once('D:\\xampp3\\htdoc...')
+#16 D:\xampp3\htdocs\starterkit-aug2024\index.php(41): include('D:\\xampp3\\htdoc...')
+#17 {main}
+  thrown in D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\HttpErrorHelper.php on line 27
+[17-Jul-2025 14:16:33 Europe/Berlin] PHP Fatal error:  Uncaught MailerSend\Exceptions\MailerSendAssertException: Value "test-86org8e50v1gew13.mlsender.net" was expected to be a valid e-mail address. in D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\GeneralHelpers.php:22
+Stack trace:
+#0 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\GeneralHelpers.php(37): MailerSend\Helpers\GeneralHelpers::assert(Object(Closure))
+#1 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Endpoints\Email.php(22): MailerSend\Helpers\GeneralHelpers::validateEmailParams(Object(MailerSend\Helpers\Builder\EmailParams))
+#2 D:\xampp3\htdocs\starterkit-aug2024\app\Emails\emailtest.php(23): MailerSend\Endpoints\Email->send(Object(MailerSend\Helpers\Builder\EmailParams))
+#3 D:\xampp3\htdocs\starterkit-aug2024\routes.php(28): require_once('D:\\xampp3\\htdoc...')
+#4 D:\xampp3\htdocs\starterkit-aug2024\index.php(41): include('D:\\xampp3\\htdoc...')
+#5 {main}
+  thrown in D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\GeneralHelpers.php on line 22
+[17-Jul-2025 15:02:07 Europe/Berlin] PHP Warning:  Undefined variable $tags in D:\xampp3\htdocs\starterkit-aug2024\app\Emails\emailtest.php on line 21
+[17-Jul-2025 15:02:07 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: MailerSend\Helpers\Builder\EmailParams::setTags(): Argument #1 ($tags) must be of type array, null given, called in D:\xampp3\htdocs\starterkit-aug2024\app\Emails\emailtest.php on line 21 and defined in D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\Builder\EmailParams.php:157
+Stack trace:
+#0 D:\xampp3\htdocs\starterkit-aug2024\app\Emails\emailtest.php(21): MailerSend\Helpers\Builder\EmailParams->setTags(NULL)
+#1 D:\xampp3\htdocs\starterkit-aug2024\routes.php(28): require_once('D:\\xampp3\\htdoc...')
+#2 D:\xampp3\htdocs\starterkit-aug2024\index.php(41): include('D:\\xampp3\\htdoc...')
+#3 {main}
+  thrown in D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\Builder\EmailParams.php on line 157
+[17-Jul-2025 15:02:41 Europe/Berlin] PHP Fatal error:  Uncaught MailerSend\Exceptions\MailerSendValidationException: The from.email domain must be verified in your account to send emails. #MS42207 in D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\HttpErrorHelper.php:27
+Stack trace:
+#0 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\httplug\src\Promise\HttpFulfilledPromise.php(28): MailerSend\Helpers\HttpErrorHelper->MailerSend\Helpers\{closure}(Object(GuzzleHttp\Psr7\Response))
+#1 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\HttpErrorHelper.php(19): Http\Client\Promise\HttpFulfilledPromise->then(Object(Closure))
+#2 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(44): MailerSend\Helpers\HttpErrorHelper->handleRequest(Object(Nyholm\Psr7\Request), Object(Closure), Object(Http\Client\Common\PluginChain))
+#3 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\Plugin\HeaderDefaultsPlugin.php(41): Http\Client\Common\PluginChain->Http\Client\Common\{closure}(Object(Nyholm\Psr7\Request))
+#4 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(44): Http\Client\Common\Plugin\HeaderDefaultsPlugin->handleRequest(Object(Nyholm\Psr7\Request), Object(Closure), Object(Http\Client\Common\PluginChain))
+#5 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\Plugin\ContentTypePlugin.php(81): Http\Client\Common\PluginChain->Http\Client\Common\{closure}(Object(Nyholm\Psr7\Request))
+#6 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(44): Http\Client\Common\Plugin\ContentTypePlugin->handleRequest(Object(Nyholm\Psr7\Request), Object(Closure), Object(Http\Client\Common\PluginChain))
+#7 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\Plugin\AuthenticationPlugin.php(33): Http\Client\Common\PluginChain->Http\Client\Common\{closure}(Object(Nyholm\Psr7\Request))
+#8 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(44): Http\Client\Common\Plugin\AuthenticationPlugin->handleRequest(Object(Nyholm\Psr7\Request), Object(Closure), Object(Http\Client\Common\PluginChain))
+#9 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(59): Http\Client\Common\PluginChain->Http\Client\Common\{closure}(Object(Nyholm\Psr7\Request))
+#10 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginClient.php(84): Http\Client\Common\PluginChain->__invoke(Object(Nyholm\Psr7\Request))
+#11 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Common\HttpLayer.php(90): Http\Client\Common\PluginClient->sendRequest(Object(Nyholm\Psr7\Request))
+#12 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Common\HttpLayer.php(60): MailerSend\Common\HttpLayer->call_method('POST', 'https://api.mai...', Array)
+#13 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Endpoints\Email.php(30): MailerSend\Common\HttpLayer->post('https://api.mai...', Array)
+#14 D:\xampp3\htdocs\starterkit-aug2024\app\Emails\emailtest.php(23): MailerSend\Endpoints\Email->send(Object(MailerSend\Helpers\Builder\EmailParams))
+#15 D:\xampp3\htdocs\starterkit-aug2024\routes.php(28): require_once('D:\\xampp3\\htdoc...')
+#16 D:\xampp3\htdocs\starterkit-aug2024\index.php(41): include('D:\\xampp3\\htdoc...')
+#17 {main}
+  thrown in D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\HttpErrorHelper.php on line 27
+[17-Jul-2025 15:10:59 Europe/Berlin] PHP Fatal error:  Uncaught MailerSend\Exceptions\MailerSendValidationException: You must provide one of html, text or template_id. #MS42211 (and 3 more errors) in D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\HttpErrorHelper.php:27
+Stack trace:
+#0 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\httplug\src\Promise\HttpFulfilledPromise.php(28): MailerSend\Helpers\HttpErrorHelper->MailerSend\Helpers\{closure}(Object(GuzzleHttp\Psr7\Response))
+#1 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\HttpErrorHelper.php(19): Http\Client\Promise\HttpFulfilledPromise->then(Object(Closure))
+#2 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(44): MailerSend\Helpers\HttpErrorHelper->handleRequest(Object(Nyholm\Psr7\Request), Object(Closure), Object(Http\Client\Common\PluginChain))
+#3 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\Plugin\HeaderDefaultsPlugin.php(41): Http\Client\Common\PluginChain->Http\Client\Common\{closure}(Object(Nyholm\Psr7\Request))
+#4 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(44): Http\Client\Common\Plugin\HeaderDefaultsPlugin->handleRequest(Object(Nyholm\Psr7\Request), Object(Closure), Object(Http\Client\Common\PluginChain))
+#5 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\Plugin\ContentTypePlugin.php(81): Http\Client\Common\PluginChain->Http\Client\Common\{closure}(Object(Nyholm\Psr7\Request))
+#6 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(44): Http\Client\Common\Plugin\ContentTypePlugin->handleRequest(Object(Nyholm\Psr7\Request), Object(Closure), Object(Http\Client\Common\PluginChain))
+#7 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\Plugin\AuthenticationPlugin.php(33): Http\Client\Common\PluginChain->Http\Client\Common\{closure}(Object(Nyholm\Psr7\Request))
+#8 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(44): Http\Client\Common\Plugin\AuthenticationPlugin->handleRequest(Object(Nyholm\Psr7\Request), Object(Closure), Object(Http\Client\Common\PluginChain))
+#9 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(59): Http\Client\Common\PluginChain->Http\Client\Common\{closure}(Object(Nyholm\Psr7\Request))
+#10 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginClient.php(84): Http\Client\Common\PluginChain->__invoke(Object(Nyholm\Psr7\Request))
+#11 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Common\HttpLayer.php(90): Http\Client\Common\PluginClient->sendRequest(Object(Nyholm\Psr7\Request))
+#12 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Common\HttpLayer.php(60): MailerSend\Common\HttpLayer->call_method('POST', 'https://api.mai...', Array)
+#13 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Endpoints\Email.php(30): MailerSend\Common\HttpLayer->post('https://api.mai...', Array)
+#14 D:\xampp3\htdocs\starterkit-aug2024\app\Emails\emailtest.php(29): MailerSend\Endpoints\Email->send(Object(MailerSend\Helpers\Builder\EmailParams))
+#15 D:\xampp3\htdocs\starterkit-aug2024\routes.php(28): require_once('D:\\xampp3\\htdoc...')
+#16 D:\xampp3\htdocs\starterkit-aug2024\index.php(41): include('D:\\xampp3\\htdoc...')
+#17 {main}
+  thrown in D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\HttpErrorHelper.php on line 27
+[17-Jul-2025 15:12:07 Europe/Berlin] PHP Fatal error:  Uncaught MailerSend\Exceptions\MailerSendValidationException: You must provide one of html, text or template_id. #MS42211 (and 3 more errors) in D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\HttpErrorHelper.php:27
+Stack trace:
+#0 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\httplug\src\Promise\HttpFulfilledPromise.php(28): MailerSend\Helpers\HttpErrorHelper->MailerSend\Helpers\{closure}(Object(GuzzleHttp\Psr7\Response))
+#1 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\HttpErrorHelper.php(19): Http\Client\Promise\HttpFulfilledPromise->then(Object(Closure))
+#2 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(44): MailerSend\Helpers\HttpErrorHelper->handleRequest(Object(Nyholm\Psr7\Request), Object(Closure), Object(Http\Client\Common\PluginChain))
+#3 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\Plugin\HeaderDefaultsPlugin.php(41): Http\Client\Common\PluginChain->Http\Client\Common\{closure}(Object(Nyholm\Psr7\Request))
+#4 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(44): Http\Client\Common\Plugin\HeaderDefaultsPlugin->handleRequest(Object(Nyholm\Psr7\Request), Object(Closure), Object(Http\Client\Common\PluginChain))
+#5 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\Plugin\ContentTypePlugin.php(81): Http\Client\Common\PluginChain->Http\Client\Common\{closure}(Object(Nyholm\Psr7\Request))
+#6 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(44): Http\Client\Common\Plugin\ContentTypePlugin->handleRequest(Object(Nyholm\Psr7\Request), Object(Closure), Object(Http\Client\Common\PluginChain))
+#7 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\Plugin\AuthenticationPlugin.php(33): Http\Client\Common\PluginChain->Http\Client\Common\{closure}(Object(Nyholm\Psr7\Request))
+#8 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(44): Http\Client\Common\Plugin\AuthenticationPlugin->handleRequest(Object(Nyholm\Psr7\Request), Object(Closure), Object(Http\Client\Common\PluginChain))
+#9 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(59): Http\Client\Common\PluginChain->Http\Client\Common\{closure}(Object(Nyholm\Psr7\Request))
+#10 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginClient.php(84): Http\Client\Common\PluginChain->__invoke(Object(Nyholm\Psr7\Request))
+#11 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Common\HttpLayer.php(90): Http\Client\Common\PluginClient->sendRequest(Object(Nyholm\Psr7\Request))
+#12 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Common\HttpLayer.php(60): MailerSend\Common\HttpLayer->call_method('POST', 'https://api.mai...', Array)
+#13 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Endpoints\Email.php(30): MailerSend\Common\HttpLayer->post('https://api.mai...', Array)
+#14 D:\xampp3\htdocs\starterkit-aug2024\app\Emails\emailtest.php(29): MailerSend\Endpoints\Email->send(Object(MailerSend\Helpers\Builder\EmailParams))
+#15 D:\xampp3\htdocs\starterkit-aug2024\routes.php(28): require_once('D:\\xampp3\\htdoc...')
+#16 D:\xampp3\htdocs\starterkit-aug2024\index.php(41): include('D:\\xampp3\\htdoc...')
+#17 {main}
+  thrown in D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\HttpErrorHelper.php on line 27
+[17-Jul-2025 15:18:53 Europe/Berlin] PHP Fatal error:  Uncaught MailerSend\Exceptions\MailerSendValidationException: One or more emails in the personalization field do not exist in the recipients field. #MS42217 in D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\HttpErrorHelper.php:27
+Stack trace:
+#0 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\httplug\src\Promise\HttpFulfilledPromise.php(28): MailerSend\Helpers\HttpErrorHelper->MailerSend\Helpers\{closure}(Object(GuzzleHttp\Psr7\Response))
+#1 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\HttpErrorHelper.php(19): Http\Client\Promise\HttpFulfilledPromise->then(Object(Closure))
+#2 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(44): MailerSend\Helpers\HttpErrorHelper->handleRequest(Object(Nyholm\Psr7\Request), Object(Closure), Object(Http\Client\Common\PluginChain))
+#3 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\Plugin\HeaderDefaultsPlugin.php(41): Http\Client\Common\PluginChain->Http\Client\Common\{closure}(Object(Nyholm\Psr7\Request))
+#4 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(44): Http\Client\Common\Plugin\HeaderDefaultsPlugin->handleRequest(Object(Nyholm\Psr7\Request), Object(Closure), Object(Http\Client\Common\PluginChain))
+#5 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\Plugin\ContentTypePlugin.php(81): Http\Client\Common\PluginChain->Http\Client\Common\{closure}(Object(Nyholm\Psr7\Request))
+#6 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(44): Http\Client\Common\Plugin\ContentTypePlugin->handleRequest(Object(Nyholm\Psr7\Request), Object(Closure), Object(Http\Client\Common\PluginChain))
+#7 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\Plugin\AuthenticationPlugin.php(33): Http\Client\Common\PluginChain->Http\Client\Common\{closure}(Object(Nyholm\Psr7\Request))
+#8 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(44): Http\Client\Common\Plugin\AuthenticationPlugin->handleRequest(Object(Nyholm\Psr7\Request), Object(Closure), Object(Http\Client\Common\PluginChain))
+#9 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginChain.php(59): Http\Client\Common\PluginChain->Http\Client\Common\{closure}(Object(Nyholm\Psr7\Request))
+#10 D:\xampp3\htdocs\starterkit-aug2024\vendor\php-http\client-common\src\PluginClient.php(84): Http\Client\Common\PluginChain->__invoke(Object(Nyholm\Psr7\Request))
+#11 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Common\HttpLayer.php(90): Http\Client\Common\PluginClient->sendRequest(Object(Nyholm\Psr7\Request))
+#12 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Common\HttpLayer.php(60): MailerSend\Common\HttpLayer->call_method('POST', 'https://api.mai...', Array)
+#13 D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Endpoints\Email.php(30): MailerSend\Common\HttpLayer->post('https://api.mai...', Array)
+#14 D:\xampp3\htdocs\starterkit-aug2024\app\Emails\emailtest.php(38): MailerSend\Endpoints\Email->send(Object(MailerSend\Helpers\Builder\EmailParams))
+#15 D:\xampp3\htdocs\starterkit-aug2024\routes.php(28): require_once('D:\\xampp3\\htdoc...')
+#16 D:\xampp3\htdocs\starterkit-aug2024\index.php(41): include('D:\\xampp3\\htdoc...')
+#17 {main}
+  thrown in D:\xampp3\htdocs\starterkit-aug2024\vendor\mailersend\mailersend\src\Helpers\HttpErrorHelper.php on line 27

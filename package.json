@@ -1,0 +1,24 @@
+{
+  "name": "starterkits",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./app/assets/css/styles.css -o ./app/assets/css/output.css --watch",
+    "build": "npx tailwindcss -i ./app/assets/css/styles.css -o ./app/assets/css/output.css --minify",
+    "prod": "npm run build",
+    "push": "git pull origin main && git add -A && git commit -m \"$npm_config_msg\" && git push origin main",
+    "autopush": "git add -A && git commit -m \"Auto‐commit: $(date)\" && git push origin master"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.10"
+  },
+  "dependencies": {
+    "aos": "^2.3.4"
+  }
+}
